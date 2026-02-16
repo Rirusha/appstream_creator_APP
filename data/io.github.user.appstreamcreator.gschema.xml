@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="appstream_creator_app">
+	<schema id="io.github.user.appstreamcreator" path="/io/github/user/appstreamcreator/">
+	</schema>
+</schemalist>

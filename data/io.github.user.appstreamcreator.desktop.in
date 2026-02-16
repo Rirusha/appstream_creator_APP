@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=appstream_creator_app
+Exec=appstream_creator_app
+Icon=io.github.user.appstreamcreator
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

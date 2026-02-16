@@ -1,0 +1,383 @@
+@define-color purple_bg_start #8b5cf6;
+@define-color purple_bg_end #6d28d9;
+@define-color purple_light #c084fc;
+@define-color purple_dark #5b21b6;
+@define-color purple_hover #a78bfa;
+@define-color white_transparent rgba(255, 255, 255, 0.1);
+@define-color white_transparent_hover rgba(255, 255, 255, 0.2);
+@define-color white_transparent_border rgba(255, 255, 255, 0.3);
+@define-color text_primary #ffffff;
+@define-color text_secondary rgba(255, 255, 255, 0.8);
+@define-color text_muted rgba(255, 255, 255, 0.5);
+@define-color error_color #f87171;
+
+window.background {
+    background: linear-gradient(135deg, @purple_bg_start, @purple_bg_end);
+}
+
+window > box > headerbar {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    box-shadow: none;
+}
+
+headerbar title {
+    color: white;
+    font-weight: bold;
+}
+
+.header-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background: @white_transparent;
+    border-radius: 16px;
+    border: 1px solid @white_transparent_border;
+    padding: 12px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    background: @white_transparent_hover;
+    border-color: @purple_light;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+entry, textview, dropdown, spinbutton {
+    background: @white_transparent;
+    border: 1px solid @white_transparent_border;
+    border-radius: 10px;
+    color: @text_primary;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+    min-height: 36px;
+    font-size: 14px;
+}
+
+textview text {
+    background: transparent;
+    color: @text_primary;
+}
+
+entry:hover, textview:hover, dropdown:hover, spinbutton:hover {
+    background: @white_transparent_hover;
+    border-color: @purple_light;
+}
+
+entry:focus, textview:focus, dropdown:focus, spinbutton:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: @purple_light;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.3);
+}
+
+entry:disabled, textview:disabled {
+    opacity: 0.5;
+}
+
+entry placeholder {
+    color: @text_muted;
+    font-style: italic;
+}
+
+dropdown button {
+    background: transparent;
+    border: none;
+    color: @text_primary;
+    min-height: 36px;
+    padding: 4px 8px;
+}
+
+dropdown button:hover {
+    background: @white_transparent_hover;
+    border-radius: 8px;
+}
+
+dropdown popover {
+    background: @purple_dark;
+    border: 1px solid @purple_light;
+}
+
+dropdown popover list {
+    background: transparent;
+}
+
+dropdown popover row {
+    color: white;
+}
+
+dropdown popover row:hover {
+    background: @purple_hover;
+}
+
+label {
+    color: @text_primary;
+}
+
+label.heading {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+    opacity: 0.9;
+    color: @text_primary;
+}
+
+label.error {
+    color: @error_color;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+button {
+    background: @white_transparent;
+    border: 1px solid @white_transparent_border;
+    border-radius: 10px;
+    color: @text_primary;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-height: 38px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button:hover {
+    background: @white_transparent_hover;
+    border-color: @purple_light;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button.suggested-action {
+    background: @purple_light;
+    color: white;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+button.suggested-action:hover {
+    background: @purple_dark;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+button.destructive-action {
+    background: @error_color;
+    color: white;
+    border: none;
+}
+
+button.destructive-action:hover {
+    background: #ef4444;
+}
+
+checkbutton, radiobutton {
+    color: @text_primary;
+}
+
+checkbutton check, radiobutton radio {
+    background: @white_transparent;
+    border: 1px solid @white_transparent_border;
+}
+
+checkbutton check:hover, radiobutton radio:hover {
+    background: @white_transparent_hover;
+}
+
+checkbutton check:checked, radiobutton radio:checked {
+    background: @purple_light;
+    border-color: @purple_light;
+}
+
+scrollbar {
+    background: transparent;
+}
+
+scrollbar slider {
+    background: @white_transparent_border;
+    border-radius: 10px;
+    min-width: 6px;
+    min-height: 40px;
+}
+
+scrollbar slider:hover {
+    background: @purple_light;
+}
+
+scrollbar slider:active {
+    background: @purple_hover;
+}
+
+separator {
+    background: @white_transparent_border;
+    min-height: 1px;
+    margin: 16px 0;
+}
+
+textview text {
+    background: rgba(0, 0, 0, 0.3);
+    color: #d8b4fe;
+    font-family: 'Monospace', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+toast {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.required label {
+    color: @purple_light;
+}
+
+.required label::after {
+    content: " *";
+    color: @error_color;
+    font-weight: bold;
+}
+
+.field-group {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.field-group-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: @text_primary;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid @white_transparent_border;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .field-group {
+    animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 8px;
+        margin: 8px;
+    }
+
+    entry, button {
+        min-height: 44px;
+    }
+
+    .field-group {
+        padding: 12px;
+    }
+}
+
+spinner {
+    color: @purple_light;
+}
+
+progressbar {
+    background: @white_transparent;
+    border-radius: 10px;
+}
+
+progressbar progress {
+    background: @purple_light;
+    border-radius: 10px;
+}
+notebook {
+    background: transparent;
+}
+
+notebook tab {
+    background: @white_transparent;
+    color: @text_primary;
+    border: 1px solid @white_transparent_border;
+}
+
+notebook tab:checked {
+    background: @purple_light;
+    border-color: @purple_light;
+}
+
+dialog {
+    background: @purple_dark;
+    color: @text_primary;
+}
+
+dialog .dialog-action-area button {
+    background: @white_transparent;
+    border: 1px solid @white_transparent_border;
+}
+
+dialog .dialog-action-area button.suggested-action {
+    background: @purple_light;
+}
+
+tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    color: @text_primary;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+link {
+    color: @purple_light;
+    text-decoration: underline;
+}
+
+link:hover {
+    color: @purple_hover;
+}
+
+text selection {
+    background-color: @purple_light;
+    color: white;
+}
+
+frame {
+    border-radius: 12px;
+}
+
+frame > border {
+    border: 1px solid @white_transparent_border;
+    border-radius: 12px;
+}
+
+.xml-preview {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.main-container {
+    padding: 20px;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.3);
+}S
